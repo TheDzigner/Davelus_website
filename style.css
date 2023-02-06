@@ -616,7 +616,9 @@ header .menu_btn button
   border:1px inset rgba(238, 130, 104,.3);
   box-shadow :0 0 7px rgba(105, 72, 81,.5);
   background :transparent ;
-  backdrop-filter: blur(10px);
+  backdrop-filter :blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter :blur(10px);
   display: flex;
   justify-content :center ;
   align-items :center ;
@@ -675,6 +677,8 @@ form
   opacity :0 ;
   transition :opacity 1s ease-in-out ;
   background-image: url(/images/1506fbba-ff0d-499d-8c20-71bd79a4d4a5-compressed.jpg);
+  -webkit-background-image:url(/images/1506fbba-ff0d-499d-8c20-71bd79a4d4a5-compressed.jpg);
+    -moz-background-image:url(/images/1506fbba-ff0d-499d-8c20-71bd79a4d4a5-compressed.jpg);
   -webkit-background-origin: center;
   -moz-background-origin: center;
   background-size: cover ;
