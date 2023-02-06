@@ -29,7 +29,9 @@ header
   justify-content :space-between;
   align-items :center ;
   background :transparent ;
-  backdrop-filter :blur(10px);
+ backdrop-filter :blur(10px);
+ -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter :blur(10px);
   padding :5px ;
   z-index :10 ;
   border-bottom :1px solid rgba(183,185,190,.2);
@@ -306,8 +308,7 @@ header .menu_btn button
 {
   color :#DD640E;
   font-size :.8em ;
-  font-weight :900 ;
-  border :1px solid transparent ;
+  font-weight :500 ;
   opacity :1;
   transition : opacity .4s ease-in-out ;
 }
@@ -674,6 +675,8 @@ form
   opacity :0 ;
   transition :opacity 1s ease-in-out ;
   background-image: url(/images/1506fbba-ff0d-499d-8c20-71bd79a4d4a5-compressed.jpg);
+  -webkit-background-origin: center;
+  -moz-background-origin: center;
   background-size: cover ;
   background-origin: center ;
   background-repeat: no-repeat;
