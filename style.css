@@ -1,0 +1,795 @@
+*
+{
+  margin: 0;
+  padding :0;
+  box-sizing: border-box;
+}
+
+
+
+
+body {
+    font-size: 15pt;
+    height :100vh;
+    width :min(100%,480px);
+    transition :all  .2s ease-in-out ;
+    background :#122134;
+   font-family: 'Varela Round', sans-serif;
+}
+
+
+header 
+{
+  position: fixed ;
+  top: 0;
+  left: 0;
+  width :100%;
+  height:75px;
+  display: flex ;
+  justify-content :space-between;
+  align-items :center ;
+  background :transparent ;
+  backdrop-filter :blur(10px);
+  padding :5px ;
+  z-index :10 ;
+  border-bottom :1px solid rgba(183,185,190,.2);
+}
+
+header .name 
+{
+  text-align: left;
+  padding :5px ;
+}
+
+header .name h1 
+{
+  font-size :1em ;
+  color: #FFFFFF ;
+}
+
+header .slogan span 
+{
+  font-size :.7em ;
+  display :block ;
+  padding :0;
+  color: #FFFFFF ;
+}
+
+
+header .menu_btn 
+{
+  padding :10px ;
+}
+
+header .menu_btn button 
+{
+  display: block;
+  width: 35px;
+  height :35px;
+  background :transparent ;
+  border :1px solid #054C62 ;
+  color:#FFFFFF ;
+  border-radius :5px ;
+  outline :none ;
+}
+.banner
+{
+  width: 100%;
+  height :100vh;
+  position :relative ;
+}
+.banner::before 
+{
+  content: "🪨";
+  position :absolute ;
+  top: 40%;
+  left :70%;
+  font-size :1.5em ;
+}
+.banner img 
+{
+  width: 100%;
+  height :100%;
+  object-fit :cover ;
+}
+
+.banner  .wrapper 
+{
+  width: 100%;
+  height :100%;
+  top: 0;
+  position :absolute ;
+  display: flex ;
+  justify-content :center ;
+  align-items :center ;
+  flex-direction :column ;
+  padding :10px ;
+  z-index :3;
+}
+
+.wrapper .slogan 
+{
+  width: 100%;
+  height: 150px;
+  text-align :center ;
+  display :flex ;
+  justify-content :left ;
+  align-items :center ;
+  position :absolute ;
+  bottom :40%;
+}
+
+
+.banner .wrapper .slogan p 
+{
+  text-align :left ;
+  color: #FFFFFF ;
+  font-weight :900 ;
+  font-size:1.5em ;
+  padding :20px ;
+  font-family: sans-serif;
+  transition :width 1s ease-in-out ;
+  letter-spacing :3px ;
+  animation: animLetters  2s  alternate ;
+  transition :opacity .2s ease-in-out infinite ;
+  position :relative ;
+}
+
+@keyframes animLetters
+{
+  from{
+    opacity :.4;
+  }to{
+    opacity :1 ;
+  }
+}
+
+.btn_
+{
+  margin-top: auto ;
+  margin-bottom :20%;
+  width: 50%;
+  text-align :center ;
+}
+
+.btn_ button 
+{
+  outline :none ;
+  padding :10px 30px ;
+  background :#0A636B;
+  border :1px solid #F1F1F1 ;
+  border-radius :9999px ;
+  position :relative ;
+  display :block ;
+  top: 0;
+  z-index :2;
+  animation: floating  2s ease infinite alternate;
+}
+
+@keyframes floating 
+{
+  from{
+    top:-40%;
+  }to{
+    bottom :40%;
+  }
+}
+
+
+.btn_ button a 
+{
+  outline :none ;
+  display: block ;
+  color: #FFFFFF ;
+  text-decoration :none ;
+  font-size :1.3em ;
+  font-weight :700 ;
+}
+
+
+.services 
+{
+  margin: 5% auto 0 ;
+  width: 100%;
+  height :auto;
+  padding :10px ;
+}
+
+.services h2
+{
+  text-align :left ;
+  font-size :.8em ;
+  color : rgba(238, 130, 104);
+  width :0;
+  overflow :hidden ;
+  transition :1s ease-in-out ;
+  display :block ;
+}
+.services h2.slide 
+{
+  width :100%;
+  transition :1s ease-in-out ;
+  padding :15px ;
+}
+
+.services .button_wrapper
+{
+  width: 100%;
+  margin :0 auto 0 ;
+  display: flex ;
+  justify-content :center ;
+  align-items :center ;
+  flex-wrap :wrap ;
+  padding :10px ;
+}
+.button_wrapper button 
+{
+  display :inline-block;
+  flex-grow :1 ;
+  margin :2px;
+  height: 55px;
+  background: #FFFFFF ;
+  border :1px solid rgba(183,185,190,.2);
+  text-transform :capitalize;
+  border-radius :4px;
+  font-weight :700 ;
+  outline :none ;
+  opacity:.4;
+  transform: translateY(30%);
+  transition :1s ease-in-out ;
+}
+
+.button_wrapper button.intersected 
+{
+  transform: translateY(-30%);
+  transition :1s ease-in-out ;
+}
+
+.button_wrapper button.active 
+{
+  border :1px solid #DD640E;
+  color: #E7EAF3 ;
+  background:rgba(232, 128, 58);
+  transition :background  .4s ease-in-out ;
+  opacity :1 ;
+}
+
+
+.works 
+{
+  margin :10% auto 0 ;
+  width :100%;
+  height :auto;
+  padding :5px ;
+}
+
+.works h2 
+{
+  text-align :left ;
+  font-size :.8em ;
+  width :0;
+  overflow :hidden ;
+  color : rgba(238, 130, 104);
+  transition :1s ease-in-out;
+}
+.works h2.slide 
+{
+  width :100%;
+  transition :1s ease-in-out;
+  padding :15px;
+}
+.works .buttons_filter
+{
+  width: 100%;
+  display: flex ;
+  justify-content :center ;
+  align-items :center ;
+  padding :10px ;
+}
+
+.works .buttons_filter button 
+{
+  padding: 10px ;
+  margin :5px ;
+  border :1px solid transparent;
+  background :transparent ;
+  outline :none ;
+  text-transform :capitalize ;
+  font-weight :800 ;
+  flex-grow :1 ;
+  opacity :.4;
+  color: #FFFFFF ;
+  position :relative ;
+}
+
+.buttons_filter button.active 
+{
+  color :#DD640E;
+  font-size :.8em ;
+  font-weight :900 ;
+  border :1px solid transparent ;
+  opacity :1;
+  transition : opacity .4s ease-in-out ;
+}
+
+.buttons_filter button.active::before
+{
+  content: "";
+  position :absolute ;
+  top: 100%;
+  left:50%;
+  width :5px;
+  height :5px;
+  background :#DD640E;
+  border-radius :50%;
+}
+
+.cards_wrapper 
+{
+  width: 100%;
+  height :auto ;
+  display: flex ;
+  flex-wrap :wrap ;
+  justify-content :left ;
+  align-items :flex-start ;
+  margin :0 auto 0 ;
+  padding :5px ;
+}
+
+.cards_wrapper .card 
+{
+  width: 48%;
+  height :auto ;
+  opacity :0;
+  margin: 1px auto 0 ;
+  transition :.2s ease-in-out ;
+  transform :translateY(15px);
+}
+
+.card.intersected
+{
+  opacity: 1 ;
+  transform :translateY(-15px);
+  transition :.9s ease-in-out;
+}
+
+.card.disapear 
+{
+  width: 0;
+  height :0;
+  margin: -2px;
+  padding :0;
+  overflow :hidden ;
+  transition : width .4s ;
+}
+
+.card.appear 
+{
+  height :auto ;
+  width: 48%;
+  margin :3px;
+  overflow :hidden ;
+  transition : width  .4s ;
+
+}
+
+
+
+.card img 
+{
+  width: 100%;
+  height :100%;
+  object-fit: contain;
+  margin :0;
+  border-radius :10px ;
+}
+
+
+
+.testimonial_container
+{
+  margin: 15% auto 0 ;
+  width :100%;
+  padding :5px ;
+}
+
+
+.testimonial_container h2 
+{
+  font-size :.8em ;
+  padding :5px ;
+  text-align :left ;
+  color : rgba(238, 130, 104);
+}
+
+.testimonial_wrapper 
+{
+  width: 100%;
+  height :auto ;
+  display: flex;
+  justify-content :left ;
+  align-items :center ;
+  flex-wrap :wrap ;
+  transition :.2s ease-in-out ;
+}
+
+
+.testimonial_wrapper  .testimonial
+{
+  width: 100%;
+  height: auto;
+  border-bottom :1px groove rgba(232, 128, 58,.2) ;
+  display: flex;
+  justify-content :center ;
+  align-items :flex-start ;
+  flex-direction :column ;
+  margin :5px ;
+  padding :10px ;
+}
+
+.testimonial .client_photo
+{
+  width: auto;
+  margin-right :auto ;
+  display: flex;
+  justify-content :left ;
+  align-items :center 
+}
+
+.testimonial  .client_photo img 
+{
+  width :35px;
+  height :35px;
+  object-fit :cover ;
+  border-radius :50%;
+  display :inline-block ;
+}
+
+.client_photo h4 
+{
+  padding :5px ;
+  color: #E7EAF3;
+  font-size :.5em;
+}
+
+.testimonial .feedback_wrapper
+{
+  width: 100%;
+  height :auto ;
+  word-break :break-all ;
+  padding :5px ;
+}
+
+.testimonial .feedback_wrapper p 
+{
+  padding :10px ;
+  color: #E7EAF3;
+  font-size :.7em ;
+}
+
+.testimonial span 
+{
+  padding: 10px ;
+  font-size :.6em;
+  display :block ;
+  color: #E7EAF3;
+}
+
+
+.testimonial_container .nav_btn 
+{
+  width: 100%;
+  height :35px ;
+  margin :10px auto 0 ;
+  display :flex ;
+  justify-content :flex-end ;
+  align-items :center ;
+}
+
+.testimonial_container .nav_btn button 
+{
+  display: inline-block ;
+  width :35px;
+  height :35px;
+  outline :none ;
+  border :1px solid #F1F1F1 ;
+  margin :10px ;
+  font-size :1.5em;
+}
+
+
+.team_container 
+{
+  width :100%;
+  margin :10% auto 0 ;
+  padding :10px ;
+}
+
+.team_container h2 
+{
+  padding :10px ;
+  text-align :center ;
+  color : rgba(238, 130, 104);
+  text-transform :capitalize ;
+}
+.team_container button 
+{
+  margin-left :auto ;
+  display :block ;
+  outline :none ;
+  width: 45px;
+  height :25px;
+  border :1px solid #054C62 ;
+  color:#FFFFFF ;
+  border-radius :5px ;
+  padding :5px ;
+  background :#0A636B;
+  text-align :center ;
+}
+
+.speech_wrapper 
+{
+  width :100%;
+  transition :1s ease-in-out ;
+  overflow :hidden ;
+  height :92px;
+  transition :.2s ease-in-out ;
+}
+
+.speech_wrapper.active 
+{
+  height: 670px ;
+  transition :.2s ease-in-out ;
+}
+
+
+.speech_wrapper p 
+{
+  text-align :justify ;
+  color: #E7EAF3;
+  width :100%;
+  overflow :hidden ;
+  transition :1s ease-in-out ;
+}
+
+.speech_wrapper blockquote 
+{
+  text-transform :uppercase ;
+  color:#0B9989;
+}
+
+
+.profile_wrapper
+{
+  width: 100%;
+  height :auto;
+  display: grid;
+  grid-auto-flow: column ;
+  overscroll-behavior-x: contain;
+  overflow :hidden ;
+  overflow-x: auto ;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-padding: 10px ;
+  gap:1rem;
+  margin :5px auto 0 ;
+}
+
+.profile_wrapper .profile 
+{
+  scroll-snap-align: start;
+  width:280px;
+  height :350px;
+  scroll-snap-stop: always ;
+  position :relative ;
+  display :flex ;
+  justify-content :space-between ;
+  align-items :center ;
+  flex-direction :column ;
+  overflow :hidden ;
+  background :rgba(41, 42, 62,.3);
+  border-radius :7px ;
+  
+}
+
+
+.profile .background
+{
+  width: 100%;
+  height :200%;
+}
+
+.profile .background img 
+{
+  width: 100%;
+  height :100%;
+  opacity :.4;
+}
+
+.profile .about 
+{
+  position :absolute ;
+  width :85%;
+  height :75%;
+  top: 3%;
+  border:1px inset rgba(238, 130, 104,.3);
+  box-shadow :0 0 7px rgba(105, 72, 81,.5);
+  background :transparent ;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content :center ;
+  align-items :center ;
+  flex-direction :column ;
+  z-index :1;
+}
+
+.about .me_photo 
+{
+  width: 140px;
+  height :140px;
+}
+.about .me_photo img 
+{
+  width: 100%;
+  height :100%;
+  object-fit :cover ;
+}
+
+.about .me_name 
+{
+  width: 100%;
+  text-align :center ;
+  padding :10px ;
+  text-transform :capitalize ;
+}
+.about .me_name h5 
+{
+  padding:5px ;
+  color:#E7EAF3 ;
+  font-weight :300 ;
+  font-size :1em ;
+}
+.about .me_name span 
+{
+  font-size :.5em;
+  display :block ;
+  color:#E7EAF3 ;
+}
+
+.about .me_works_count 
+{
+  width :50%;
+  text-align :center ;
+  color: #E7EAF3;
+  font-size :.5em ;
+}
+
+
+
+form
+{
+  margin: 10% auto 0 ;
+  width :95%;
+  height :auto ;
+  opacity :0 ;
+  transition :opacity 1s ease-in-out ;
+  background-image: url(/images/1506fbba-ff0d-499d-8c20-71bd79a4d4a5-compressed.jpg);
+  background-size: cover ;
+  background-origin: center ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right ;
+  padding :10px ;
+  border-radius :10px ;
+}
+
+form.activeForm 
+{
+  opacity: 1 ;
+  transition :opacity 1s ease-in-out ;
+}
+
+form h2 
+{
+  font-size :.8em ;
+  padding :10px ;
+  text-align :left ;
+  color : rgba(238, 130, 104);
+}
+
+form .inputs 
+{
+  width: 100%;
+  height :auto ;
+  display: flex ;
+  justify-content :center ;
+  align-items :flex-start ;
+  flex-direction :column ;
+  padding :10px ;
+}
+
+.inputs label 
+{
+  padding: 10px ;
+  width :100%;
+}
+.inputs label h6 
+{
+  padding: 5px ;
+  font-size :.7em ;
+  font-weight :400 ;
+  color: #FFFFFF ;
+}
+
+.inputs  label input, select 
+{
+  display: block;
+  width :100%;
+  height :45px;
+  outline :none ;
+  border :1px solid rgba(3,3,3,.3);
+  border-radius :5px ;
+  padding :10px ;
+  background :#FFFFFF ;
+  text-transform :capitalize ;
+  font-size :.6em ;
+  font-weight :400 ;
+}
+
+
+form .submitbtn 
+{
+  width: 50%;
+  margin-left :auto ;
+  text-align :center ;
+  padding :10px ;
+}
+
+form  .submitbtn button 
+{
+  display: block ;
+  padding :10px 20px ;
+  border :1px solid #F1F1F1 ;
+  border-radius :5px ;
+  outline :none ;
+  background :#DD640E;
+  color: #FFFFFF ;
+  font-size :.7em ;
+}
+
+
+footer 
+{
+  width: 100%;
+  margin:10% auto 0 ;
+  display :flex ;
+  justify-content :center;
+  align-items :flex-start ;
+  flex-direction :column ;
+  background :rgba(30,20,29,.5);
+}
+footer h2{
+  padding :10px ;
+  font-size :.8em ;
+  color : rgba(238, 130, 104);
+}
+footer .contact_ 
+{
+  width: 50%;
+  height :145px;
+  margin :5px ;
+}
+
+.contact_ a 
+{
+  display: block ;
+  padding :5px ;
+  color:#E7EAF3 ;
+  text-decoration :underline ;
+  padding :5px ;
+  outline :none ;
+  font-size :.7em;
+  font-weight :300 ;
+  text-transform :capitalize ;
+}
+
